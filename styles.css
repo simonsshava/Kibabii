@@ -1,0 +1,171 @@
+/* ==========================
+   GLOBAL STYLES
+========================== */
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #1f2937; /* Tailwind gray-900 */
+  background-color: #f9fafb; /* Tailwind gray-50 */
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2, h3, h4 {
+  color: #111827; /* Tailwind gray-900 */
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+.btn-primary {
+  background-color: #1d4ed8; /* Tailwind blue-700 */
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #1e40af; /* Tailwind blue-800 */
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: none;
+  border: 2px solid #1d4ed8;
+  color: #1d4ed8;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background-color: #1d4ed8;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ==========================
+   CARDS
+========================== */
+.card-custom {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* ==========================
+   GALLERY
+========================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ==========================
+   FORM STYLES
+========================== */
+form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d1d5db; /* Tailwind gray-300 */
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #1d4ed8; /* Tailwind blue-700 */
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.3);
+}
+
+/* ==========================
+   NOTICE BOARD
+========================== */
+#notice .card-custom {
+  border-left-width: 4px;
+}
+
+#notice .card-custom:hover {
+  transform: scale(1.03);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+footer {
+  background-color: #1d4ed8; /* Tailwind blue-700 */
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* ==========================
+   ANIMATIONS
+========================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.card-custom {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.card-custom:nth-child(1) { animation-delay: 0.1s; }
+.card-custom:nth-child(2) { animation-delay: 0.2s; }
+.card-custom:nth-child(3) { animation-delay: 0.3s; }
+.card-custom:nth-child(4) { animation-delay: 0.4s; }
+.card-custom:nth-child(5) { animation-delay: 0.5s; }
+.card-custom:nth-child(6) { animation-delay: 0.6s; }
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+}
